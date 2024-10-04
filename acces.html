@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab-System</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/e27004ce89.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/acces.css" />
+  </head>
+  <body>
+    <div class="container vh-100 d-md-flex flex-column justify-content-center">
+      <!--access-->
+      <div id="acces" class="row mq-vh">
+        <div
+          class="col d-none d-lg-flex justify-content-center align-items-center"
+        >
+          <h2 class="display-3 text-center">Bienvenido al laboratorio</h2>
+        </div>
+        <div class="col rounded bg-primary p-5">
+          <h3 class="display-3 text-light">iniciar sesion</h3>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label text-light"
+                >Usuario</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="accesInputEmail"
+                aria-describedby="emailHelp"
+              />
+              <div id="emailHelp" class="form-text text-light">
+                El usuario es para el personal del laboratorio.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label text-light"
+                >Contraseña</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="accesInputPassword"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="accesCheckSession"
+              />
+              <label class="form-check-label text-light" for="exampleCheck1"
+                >Mantener sesión</label
+              >
+            </div>
+
+            <button id="accesBtn" type="submit" class="btn btn-primary">
+              Acceder
+            </button>
+            <a href="index.html" class="btn btn-primary volver">Volver</a>
+          </form>
+        </div>
+      </div>
+      <!--patient-->
+      <div
+        id="formPatientAnalisisTalon"
+        class="d-none row mq-vh bg-primary p-0 p-md-2 p-lg-5 rounded"
+      >
+        <!--patient-form-->
+        <div id="patientFormContainer" class="col-lg-10 pt-4 p-lg-0">
+          <div class="row">
+            <div class="col">
+              <div>
+                <h2 id="patientFormWelcome" class="text-light"></h2>
+                <h3 class="text-light">
+                  por favor ingrese los datos del paciente
+                </h3>
+              </div>
+            </div>
+          </div>
+          <form id="patientForm" class="row">
+            <div class="col-lg-6">
+              <label
+                for="patientFormInputName"
+                class="form-label text-light mt-1"
+                >Nombre completo</label
+              >
+              <input
+                type="text"
+                class="form-control patient-form_input"
+                id="patientFormInputName"
+                required
+              />
+              <label
+                for="patientFormInputSurname"
+                class="form-label text-light mt-1"
+                >Apellido</label
+              >
+              <input
+                type="text"
+                class="form-control patient-form_input"
+                id="patientFormInputSurname"
+                required
+              />
+              <label
+                for="patientFormInputDni"
+                class="form-label text-light mt-1"
+                >DNI</label
+              >
+              <input
+                type="number"
+                class="form-control patient-form_input"
+                id="patientFormInputDni"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+            </div>
+            <div class="col-lg-6">
+              <label
+                for="patientFormInputPhone"
+                class="form-label text-light mt-1"
+                >Tel</label
+              >
+              <input
+                type="number"
+                class="form-control patient-form_input"
+                id="patientFormInputPhone"
+                required
+              />
+
+              <label
+                for="patientFormInputGender"
+                class="form-label text-light mt-1"
+                >Genero</label
+              >
+              <select
+                class="form-select patient-form_input"
+                id="patientFormInputGender"
+                required
+              >
+                <option selected disabled value="">Seleccione un genero</option>
+                <option>Masculino</option>
+                <option>Femenino</option>
+              </select>
+
+              <label
+                for="patientFormInputAge"
+                class="form-label text-light mt-1"
+                >Edad</label
+              >
+              <input
+                type="number"
+                class="form-control patient-form_input"
+                id="patientFormInputAge"
+                required
+              />
+            </div>
+          </form>
+        </div>
+        <!--analysis-->
+        <div id="analisys" class="col-lg-10 d-none">
+          <div
+            id="analysisContainer"
+            class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"
+          ></div>
+        </div>
+        <!--talon-->
+        <div
+          id="talonContainer"
+          class="talon__container col-lg-10 mt-3 mt-lg-0 d-none overflow-hidden"
+        >
+          <div id="talon" class="talon rounded bg-light p-3"></div>
+        </div>
+        <!--list-->
+        <div
+          id="patientListContainer"
+          class="patient-list__container col-lg-10 mt-3 mt-lg-0 d-none overflow-hidden"
+        >
+          <div id="patientList" class="col-md-12 rounded patient-list">
+            <div
+              class="accordion rounded overflow-hidden accordion-flush"
+              id="accordionFlushExample"
+            ></div>
+          </div>
+        </div>
+        <!--btns-->
+        <div
+          class="btns-lab__container d-flex align-items-end col-lg-2 mt-4 pe-md-0"
+        >
+          <div class="col d-flex mb-3 flex-lg-column align-items-center">
+            <div
+              class="btns-lab__top col-10 d-flex justify-content-start align-items-center flex-lg-column"
+            >
+              <button
+                class="patient-form__btn btn btn-primary d-none"
+                type="btn"
+                id="patientFormBtn"
+              >
+                Inicio
+              </button>
+              <button
+                class="patient-form__btn btn btn-primary"
+                type="btn"
+                id="patientListBtn"
+              >
+                <i class="bi bi-person-lines-fill"></i>
+              </button>
+              <button
+                class="patient-form__btn btn btn-primary d-none"
+                type="submit"
+                id="talonBtnAddPatient"
+              >
+                <i class="bi bi-person-plus-fill"></i>
+              </button>
+              <button
+                class="patient-form__btn btn btn-primary"
+                type="submit"
+                id="patientFormBtnNext"
+              >
+                <i class="bi bi-arrow-right-short"></i>
+              </button>
+              <button
+                id="analysisBtnFinish"
+                type="button"
+                class="patient-form__btn btn btn-primary d-none"
+              >
+                <i class="bi bi-check2"></i>
+              </button>
+              <button
+                id="analysisBtnBack"
+                type="button"
+                class="patient-form__btn btn btn-primary d-none"
+              >
+                <i class="bi bi-arrow-left-short"></i>
+              </button>
+            </div>
+            <div
+              class="btns-lab__bottom rounded justify-content-evenly d-flex flex-column flex-lg-row col-2 col-lg-10 mx-auto mt-0 mt-lg-4"
+            >
+              <button class="btn btn-primary">
+                <a class="bi bi-box-arrow-left" href="index.html"></a>
+              </button>
+              <button class="btn btn-primary" type="button" id="signOff">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>
